@@ -66,6 +66,10 @@
 Here are some portfolio websites to use as inspiration:
 
 - https://avaamini.com/
+- https://paco.me/
+- https://andymatuschak.org/
+- https://foliobin.com/
+- https://macwright.com/
 
 ## Development notes
 
