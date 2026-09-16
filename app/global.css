@@ -147,19 +147,19 @@ html {
 }
 
 .prose h1 {
-  @apply text-2xl font-medium tracking-tight mt-4 mb-2;
+  @apply text-2xl mt-4 mb-2;
 }
 
 .prose h2 {
-  @apply text-xl font-medium tracking-tight mt-4 mb-2;
+  @apply text-xl mt-4 mb-2;
 }
 
 .prose h3 {
-  @apply text-lg font-medium tracking-tight mt-4 mb-2;
+  @apply text-lg mt-4 mb-2;
 }
 
 .prose h4 {
-  @apply text-base font-medium tracking-tight mt-4 mb-2;
+  @apply text-base mt-4 mb-2;
 }
 
 .prose strong {
@@ -176,14 +176,6 @@ html {
 
 .prose ol {
   @apply list-decimal pl-6 my-0;
-}
-
-.prose td, .prose th {
-  @apply pl-0;
-}
-
-.prose tbody tr th {
-  @apply py-0.5;
 }
 
 .prose > :first-child {
@@ -216,21 +208,6 @@ input[type='email'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-/* table {
-  display: block;
-  max-width: fit-content;
-  overflow-x: auto;
-  white-space: nowrap;
-} */
-
-.prose table {
-  @apply mt-4 mb-0;
-}
-
-.prose table:not(:last-child) {
-  @apply mb-4;
 }
 
 .title {

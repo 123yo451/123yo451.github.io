@@ -5,6 +5,7 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            maxWidth: "none",
             "code::before": {
               content: "",
             },

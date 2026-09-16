@@ -30,6 +30,30 @@ set the list to `[]` to hide the section. Each link appears on its own line with
 a top-right arrow. Set `ownerProfile.linksTitle` to customize the heading
 (default: `"Links"`).
 
+## Projects
+
+Edit the `projectsPage` object in `app/projects/data.ts` to customize `/projects`.
+Set the page title and description, then replace the example projects with your
+own. Projects display in array order; move entries to reorder them.
+
+Each project needs a unique URL-friendly `id`, `title`, and `description`.
+The ID also creates a direct link such as `/projects#example-project`.
+Descriptions are plain text and preserve line breaks. Optional fields include:
+
+- `date`: any readable date or range, such as `"June 2025"`, `"2023 – 2025"`, or `"2025 – Present"`.
+- `details`: labeled values for your role, collaborators, client, status, or results.
+- `tags`: tools, technologies, or topics.
+- `links`: `{ label, href }` entries for demos, source code, papers, or related pages. Local paths and external URLs are supported.
+- `photos`: an ordered gallery of images, each with `filename`, descriptive `alt` text, original pixel `width` and `height`, and an optional `caption` or credit.
+
+Put photos in `public/projects/` (create the folder if needed) and use filenames
+relative to `public/`, such as `"projects/my-project.jpg"`. Uncomment and edit the
+photo example in the data file after adding your image. Images keep their original
+aspect ratios and support the GitHub Pages base path automatically.
+
+Omit optional fields or use empty arrays to hide their sections. Set `projects`
+to `[]` for an empty-state message. Content changes take effect on the next deployment.
+
 ## Fonts
 
 Set `fonts.sans`, `fonts.serif`, and `fonts.monospace` in `app/config.js`.
