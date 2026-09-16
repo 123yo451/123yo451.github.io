@@ -30,7 +30,11 @@ export function BlogPosts() {
               </p>
               <p className="text-neutral-600 hover:text-neutral-900 text-xl font-medium">
                 {post.metadata.title}
-                {!post.metadata.published && <span className="text-neutral-300 italic">{" "}(draft)</span>}
+                {!post.metadata.published && (
+                  <span className="ml-2 inline-flex items-center rounded-full bg-muted px-2 py-0.5 align-middle text-xs font-normal text-muted-foreground">
+                    Draft
+                  </span>
+                )}
               </p>
             </div>
           </Link>
