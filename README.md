@@ -9,10 +9,10 @@
 - Install Fast Node Manager (`fnm`) by following the instructions [in the repo](https://github.com/schniz/fnm).
     - Once `fnm` is installed, install the latest stable versions of NodeJS using the following commands:
 
-    ```bash
-    fnm install --lts --use
-    fnm default $(fnm current)
-    ```
+        ```bash
+        fnm install --lts --use
+        fnm default $(fnm current)
+        ```
 
 ### 1. Fork, then clone, this repo
 - For all instructions, replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
@@ -20,10 +20,10 @@
     - The repository can be private if you have GitHub Pro, which you can get for free by signing up for the [GitHub Student Developer Pack](https://education.github.com/pack/join). You can always make the repository private at a later date as well.
 - Once you've forked the repository into your personal GitHub account, clone it with the following commands:
 
-```bash
-cd ~
-git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io
-```
+    ```bash
+    cd ~
+    git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io
+    ```
 
 ### 2. Configure your website
 
