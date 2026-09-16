@@ -28,6 +28,15 @@
 ### 2. Configure your website
 
 - Open the folder of the repository you just cloned onto your computer (i.e. `YOUR_GITHUB_USERNAME.github.io`) in VSCode.
+- In the terminal, start the **live development server** so you can get a preview of what the changes you make look like on the website. Run the following commands:
+
+    ```bash
+    cd YOUR_GITHUB_USERNAME.github.io
+    npm install
+    npm run dev
+    ```
+
+    - Open the link that is output to the terminal in your browser. You should see the live development server rendering your website.
 - Edit `app/config.js` with your personal information.
 - You can also choose custom fonts to use on the website. [Google Fonts](https://fonts.google.com/) is a reliable source of free fonts to choose from.
 - Edit `app/projects/data.ts` with past projects you'd like to showcase.
@@ -40,6 +49,7 @@
     ```bash
     bash setup-github.sh
     ```
+
 - This creates `.github/workflows/deploy.yml` from the template embedded in the script, so the workflow can be added in a new commit in your own repository.
 - The workflow builds the site with Node.js 24 and deploys `out/` to GitHub Pages.
 
@@ -54,6 +64,7 @@
     git status
     git push
     ```
+
 - Assuming everything goes well, your website should now be uploaded to GitHub.
 
 ### 5. Enable GitHub Pages
