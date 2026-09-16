@@ -1,7 +1,7 @@
 import './global.css'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { ResponsiveNavbar } from '@/components/resnav'
+import { Navbar } from '@/components/nav'
 import Footer from '@/components/footer'
 import { fonts } from '@/config'
 import { resolveFonts } from '@/lib/fonts'
@@ -27,7 +27,7 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{ __html: siteFonts.css }} />
       </head>
       <body className="antialiased max-w-3xl mt-8 sm:mt-12 mx-auto px-6 md:px-4">
-        <ResponsiveNavbar />
+        <Navbar />
         <main className="min-w-0">{children}</main>
         <Footer />
         <Analytics />

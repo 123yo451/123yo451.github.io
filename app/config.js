@@ -8,6 +8,35 @@ export const navigationLinks = [
   { href: "/projects", label: "Projects" },
 ];
 
+// Home page profile. Put the photo in public/ and set its filename below.
+// Leave filename empty for a blank photo placeholder. Facts can optionally link to
+// another page, an external website, or an email address.
+// Edit the main introduction separately in app/components/intro.mdx.
+export const ownerProfile = {
+  photo: {
+    filename: "",
+    alt: `Portrait of ${name}`,
+  },
+  facts: [
+    { label: "Now", value: "Your current role or location" },
+    { label: "Studying", value: "What you're studying or working on" },
+    { label: "Interests", value: "Your main interests" },
+    {
+      label: "Contact",
+      value: "you@example.com",
+      href: "mailto:you@example.com",
+    },
+  ],
+  // Heading for the links section below the profile facts.
+  linksTitle: "Links",
+  // Replace these example URLs with yours.
+  // Add, remove, or reorder entries; use [] to hide the list.
+  links: [
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/your-username/" },
+    { label: "Google Scholar", href: "https://scholar.google.com/citations?user=your-id" },
+  ],
+};
+
 // Fonts: use a Google Fonts family name (e.g. "Open Sans"), or one of:
 //   { family: "Open Sans", weights: [400, 500, 600, 700] }
 //   { family: "Custom Serif", stylesheet: "https://example.com/fonts.css" }

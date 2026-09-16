@@ -11,7 +11,7 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
 
-export function ResponsiveNavbar() {
+export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const triggerRef = useRef<HTMLButtonElement>(null)
   const links = navigationLinks.map((link) => (
