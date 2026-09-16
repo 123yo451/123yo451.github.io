@@ -1,13 +1,19 @@
-export const websiteName = "FILL THIS IN";
-export const websiteDescription = "FILL THIS IN";
-export const githubUsername = "FILL THIS IN";
+// Your name appears in the top navigation and page titles.
+export const name = "Your Name";
+export const websiteDescription = `${name}'s personal website.`;
+
+// Add, remove, or reorder links here. href accepts local paths or external URLs.
+export const navigationLinks = [
+  { href: "/", label: "Home" },
+  { href: "/blog", label: "Blog" },
+];
 
 // computed values
 
 export const metadata = {
   title: {
-    default: `Home ⋅ ${websiteName}`,
-    template: `%s ⋅ ${websiteName}`,
+    default: `Home ⋅ ${name}`,
+    template: `%s ⋅ ${name}`,
   },
   description: websiteDescription,
   robots: {
