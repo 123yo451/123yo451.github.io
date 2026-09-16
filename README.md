@@ -2,13 +2,38 @@
 
 - This website is based off of the [portfolio-blog-starter](https://portfolio-blog-starter.vercel.app) Vercel template: https://github.com/vercel/examples/tree/main/solutions/blog
 
-## Configuring your website
+## Instructions
 
-- Edit `app/config.js` with your information.
+### 0. Set up your development environment
+- If you're using Windows, I recommend using a Linux distro running on WSL. All the instructions below assume a Linux/UNIX based development environment.
+- Install Fast Node Manager (`fnm`) by following the instructions [in the repo](https://github.com/schniz/fnm).
+    - Once `fnm` is installed, install the latest stable versions of NodeJS using the following commands:
+
+    ```bash
+    fnm install --lts --use
+    fnm default $(fnm current)
+    ```
+
+### 1. Fork, then clone, this repo
+- For all instructions, replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
+- Fork this repository into your own GitHub account. Name the forked repository `YOUR_GITHUB_USERNAME.github.io`.
+    - The repository can be private if you have GitHub Pro, which you can get for free by signing up for the [GitHub Student Developer Pack](https://education.github.com/pack/join). You can always make the repository private at a later date as well.
+- Once you've forked the repository into your personal GitHub account, clone it with the following commands:
+
+```bash
+cd ~
+git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io
+```
+
+### 2. Configure your website
+
+- Open the folder of the repository you just cloned onto your computer (i.e. `YOUR_GITHUB_USERNAME.github.io`) in VSCode.
+- Edit `app/config.js` with your personal information.
+- You can also choose custom fonts to use on the website. [Google Fonts](https://fonts.google.com/) is a reliable source of free fonts to choose from.
 - Edit `app/projects/data.ts` with past projects you'd like to showcase.
     - Put photos in `public/projects/` (create the folder if needed) and use filenames relative to `public/`, such as `"example-project/my-project.jpg"`.
 
-## GitHub Actions setup
+### 3. Set up GitHub Actions
 
 - After creating or forking your project, run:
 
@@ -18,7 +43,31 @@ bash setup-github.sh
 
 - This creates `.github/workflows/deploy.yml` from the template embedded in the script, so the workflow can be added in a new commit in your own repository.
 - The workflow builds the site with Node.js 24 and deploys `out/` to GitHub Pages.
-    - Ensure [GitHub Actions is enabled](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) in the new repository. Under **Settings > Pages > Build and deployment**, select **GitHub Actions** as the [publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+### 4. Commit your changes and push to GitHub
+
+- Once you've made edits to your website, you can save (commit) those changes and then push them to GitHub. Make sure you're in the top-level folder of the repo, i.e. `YOUR_GITHUB_USERNAME.github.io`, and run the following commands:
+
+```bash
+git add .
+git status
+git commit -m 'add personal info'
+git status
+git push
+```
+
+- Assuming everything goes well, your website should now be uploaded to GitHub.
+
+### 5. Enable GitHub Pages
+
+- Finally, ensure [GitHub Actions is enabled](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) in the new repository. Under **Settings > Pages > Build and deployment**, select **GitHub Actions** as the [publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+- Wait for the GitHub Action to run, and if successful, you should see your website active at https://YOUR_GITHUB_USERNAME.github.io/.
+
+## Reference portfolios
+
+Here are some portfolio websites to use as inspiration:
+
+- https://avaamini.com/
 
 ## Development notes
 
