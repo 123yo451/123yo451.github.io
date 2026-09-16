@@ -37,7 +37,7 @@ export const projectsPage: {
         { label: 'Role', value: 'Designer & developer' },
         { label: 'Status', value: 'In progress' },
       ],
-      tags: ['Design', 'Development'],
+      tags: ['Electronics'],
       // Put your images in public/projects/ and add entries like this:
       photos: [
         {

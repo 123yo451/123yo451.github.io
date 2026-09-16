@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className={cn(fontClasses[defaultFont], 'antialiased flow-root')}>
         {/* Keep page sizing separate from the body styles used by modal scroll locking. */}
-        <div className="max-w-3xl mt-8 sm:mt-12 mx-auto px-6 md:px-4">
+        <div className="max-w-4xl mt-8 sm:mt-12 mx-auto px-6 md:px-4">
           <Navbar />
           <main className="min-w-0">{children}</main>
           <Footer />

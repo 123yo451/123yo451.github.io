@@ -20,16 +20,15 @@ export default function Page() {
   const source = fs.readFileSync(path.join(introDirectory, 'intro.mdx'), 'utf-8')
 
   return (
-    <section className="grid items-start gap-8 sm:grid-cols-[12rem_minmax(0,1fr)]">
+    <section className="grid items-start gap-8 sm:grid-cols-[14rem_minmax(0,1fr)]">
       <aside className="min-w-0 space-y-6 font-mono" aria-label={`Profile of ${name}`}>
-        <div className="aspect-square w-36 shrink-0 overflow-hidden rounded-sm bg-muted sm:w-44">
+        <div className="relative aspect-square w-56 overflow-hidden rounded-sm bg-muted sm:w-full">
           {photoSrc && (
             <Image
               src={photoSrc}
               alt={ownerProfile.photo.alt}
-              width={352}
-              height={352}
-              className="size-full object-cover"
+              fill
+              className="object-cover"
               priority
             />
           )}
