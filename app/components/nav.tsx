@@ -40,11 +40,11 @@ export function Navbar() {
         <Link
           href="/"
           onClick={() => setIsOpen(false)}
-          className="min-w-0 max-w-full justify-self-start rounded-sm py-2 text-2xl font-medium tracking-tight break-words text-foreground transition-colors hover:text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+          className="min-w-0 max-w-full justify-self-start rounded-sm py-2 text-3xl font-medium tracking-tight break-words text-foreground transition-colors hover:text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
         >
           {name}
         </Link>
-        <nav aria-label="Main navigation" className="hidden min-w-0 sm:block">
+        <nav aria-label="Main navigation" className="hidden min-w-0 sm:block font-mono">
           <ul className="flex flex-wrap justify-end gap-x-6 gap-y-1 text-sm">
             {links}
           </ul>
@@ -70,7 +70,7 @@ export function Navbar() {
         <CollapsibleContent className="col-span-2 min-w-0 sm:hidden">
           <nav
             aria-label="Main navigation"
-            className="-mx-1 mt-3 max-h-[60dvh] overflow-y-auto overscroll-contain px-1 pb-2"
+            className="-mx-1 mt-3 max-h-[60dvh] overflow-y-auto overscroll-contain px-1 pb-2 font-mono"
           >
             <ul className="text-sm">{links}</ul>
           </nav>

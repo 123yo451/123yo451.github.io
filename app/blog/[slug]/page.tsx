@@ -28,17 +28,11 @@ export default async function Blog({ params }: {
 
   return (
     <section>
-      <h1 className="title font-semibold text-2xl tracking-tighter">
+      <h1 className="title font-serif font-medium text-3xl tracking-tighter">
         {post.metadata.title}
       </h1>
-      {
-        post.metadata.summary &&
-        <p className="italic text-neutral-400 my-2">
-          {post.metadata.summary}
-        </p>
-      }
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600">
+      <div className="flex justify-between items-center mt-4 mb-8 text-sm">
+        <p className="text-xs font-mono text-neutral-400">
           {formatDate(post.metadata.publishedAt)} {post.metadata.updatedAt && `(Last updated: ${formatDate(post.metadata.updatedAt)})`}
         </p>
       </div>

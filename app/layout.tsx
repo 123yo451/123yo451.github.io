@@ -3,12 +3,18 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Navbar } from '@/components/nav'
 import Footer from '@/components/footer'
-import { fonts } from '@/config'
+import { defaultFont, fonts } from '@/config'
 import { resolveFonts } from '@/lib/fonts'
+import { cn } from '@/lib/utils'
 
 export { metadata } from "@/config"
 
 const siteFonts = resolveFonts(fonts)
+const fontClasses = {
+  sans: 'font-sans',
+  serif: 'font-serif',
+  monospace: 'font-mono',
+}
 
 export default function RootLayout({
   children,
@@ -26,7 +32,7 @@ export default function RootLayout({
         ))}
         <style dangerouslySetInnerHTML={{ __html: siteFonts.css }} />
       </head>
-      <body className="antialiased max-w-3xl mt-8 sm:mt-12 mx-auto px-6 md:px-4">
+      <body className={cn(fontClasses[defaultFont], 'antialiased max-w-3xl mt-8 sm:mt-12 mx-auto px-6 md:px-4')}>
         <Navbar />
         <main className="min-w-0">{children}</main>
         <Footer />

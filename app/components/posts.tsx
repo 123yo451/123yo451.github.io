@@ -24,11 +24,11 @@ export function BlogPosts() {
             className="flex flex-col space-y-1 mb-4"
             href={`/blog/${post.slug}`}
           >
-            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p className="text-neutral-500 w-[160px] tabular-nums shrink-0">
+            <div className="w-full flex flex-col gap-1.5">
+              <p className="font-mono text-muted-foreground text-xs font-light tabular-nums">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
-              <p className="text-neutral-600 hover:text-neutral-900 tracking-tight">
+              <p className="text-neutral-600 hover:text-neutral-900 text-xl font-medium">
                 {post.metadata.title}
                 {!post.metadata.published && <span className="text-neutral-300 italic">{" "}(draft)</span>}
               </p>

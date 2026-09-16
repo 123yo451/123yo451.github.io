@@ -21,7 +21,7 @@ export default function Page() {
 
   return (
     <section className="grid items-start gap-8 sm:grid-cols-[12rem_minmax(0,1fr)]">
-      <aside className="min-w-0 space-y-6" aria-label={`Profile of ${name}`}>
+      <aside className="min-w-0 space-y-6 font-mono" aria-label={`Profile of ${name}`}>
         <div className="aspect-square w-36 shrink-0 overflow-hidden rounded-sm bg-muted sm:w-44">
           {photoSrc && (
             <Image

@@ -49,9 +49,13 @@ export const ownerProfile = {
 /** @type {import('./lib/fonts').FontConfig} */
 export const fonts = {
   sans: { family: "Geist", weights: [400, 500, 600, 700] },
-  serif: { family: "Source Serif 4", weights: [400, 500, 600, 700] },
+  serif: { family: "PT Serif", weights: [400, 500, 600, 700] },
   monospace: { family: "Geist Mono", weights: [400, 500, 600, 700] },
 };
+
+// Default site font. Explicit font-serif/font-sans/font-mono styles still override it.
+/** @type {'sans' | 'serif' | 'monospace'} */
+export const defaultFont = "serif";
 
 // computed values
 
