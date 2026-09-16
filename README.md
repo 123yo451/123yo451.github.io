@@ -8,6 +8,7 @@
 - If you're using Windows, I recommend using a Linux distro running on WSL. All the instructions below assume a Linux/UNIX based development environment.
 - Install Fast Node Manager (`fnm`) by following the instructions [in the repo](https://github.com/schniz/fnm).
     - Once `fnm` is installed, install the latest stable versions of NodeJS using the following commands:
+
         ```bash
         fnm install --lts --use
         fnm default $(fnm current)
@@ -18,6 +19,7 @@
 - Fork this repository into your own GitHub account. Name the forked repository `YOUR_GITHUB_USERNAME.github.io`.
     - The repository can be private if you have GitHub Pro, which you can get for free by signing up for the [GitHub Student Developer Pack](https://education.github.com/pack/join). You can always make the repository private at a later date as well.
 - Once you've forked the repository into your personal GitHub account, clone it with the following commands:
+
     ```bash
     cd ~
     git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io
@@ -34,6 +36,7 @@
 ### 3. Set up GitHub Actions
 
 - After creating or forking your project, run:
+
     ```bash
     bash setup-github.sh
     ```
@@ -43,6 +46,7 @@
 ### 4. Commit your changes and push to GitHub
 
 - Once you've made edits to your website, you can save (commit) those changes and then push them to GitHub. Make sure you're in the top-level folder of the repo, i.e. `YOUR_GITHUB_USERNAME.github.io`, and run the following commands:
+
     ```bash
     git add .
     git status
