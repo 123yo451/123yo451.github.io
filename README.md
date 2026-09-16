@@ -10,6 +10,31 @@ point to local pages or external URLs. Below 640px, a hamburger button opens
 a scrollable list below the name. Selecting a link or pressing Escape closes
 the menu. Larger screens show the links inline.
 
+## Fonts
+
+Set `fonts.sans`, `fonts.serif`, and `fonts.monospace` in `app/config.js`.
+Each accepts a Google Fonts name, such as `"Open Sans"`, or an object:
+
+```js
+{ family: "Open Sans", weights: [400, 500, 600, 700] }
+{ family: "Custom Serif", stylesheet: "https://example.com/fonts.css" }
+{ family: "Custom Mono", src: "https://example.com/mono.woff2", weight: "100 900" }
+```
+
+For a stylesheet, use the exact `font-family` declared by the provider. Google
+Fonts stylesheet links also work, including links specifying italics or variable
+axes. See the [Google Fonts CSS API](https://developers.google.com/fonts/docs/css2)
+for available URL options. A name alone requests the regular style; request only
+weights supported by that family. Direct font files default to weight `400` and
+style `normal`; set `weight` to the file's weight or variable range and `style` to
+`normal`, `italic`, or `oblique`. Use a stylesheet for multiple files/styles.
+URLs load in visitors' browsers and must allow use from your site's origin.
+
+Use `null` for a system font stack without a download. Sans is the default body
+font; code uses monospace. The Tailwind `font-sans`, `font-serif`, and `font-mono`
+utilities use the same configuration, including in MDX. Font changes only need
+edits to `app/config.js` and take effect on the next deployment.
+
 ## Development notes
 
 - Use Node.js 20.9 or later (Node.js 24 is used in CI and the dev container). The app targets Next.js 16.3.5 with React 19.

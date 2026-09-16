@@ -1,14 +1,14 @@
 import './global.css'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ResponsiveNavbar } from '@/components/resnav'
 import Footer from '@/components/footer'
+import { fonts } from '@/config'
+import { resolveFonts } from '@/lib/fonts'
 
 export { metadata } from "@/config"
 
-const cx = (...classes) => classes.filter(Boolean).join(' ')
+const siteFonts = resolveFonts(fonts)
 
 export default function RootLayout({
   children,
@@ -18,12 +18,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(
-        'text-black bg-white',
-        GeistSans.variable,
-        GeistMono.variable
-      )}
+      className="text-black bg-white"
     >
+      <head>
+        {siteFonts.stylesheets.map((href) => (
+          <link key={href} rel="stylesheet" href={href} />
+        ))}
+        <style dangerouslySetInnerHTML={{ __html: siteFonts.css }} />
+      </head>
       <body className="antialiased max-w-3xl mt-8 sm:mt-12 mx-auto px-6 md:px-4">
         <ResponsiveNavbar />
         <main className="min-w-0">{children}</main>
