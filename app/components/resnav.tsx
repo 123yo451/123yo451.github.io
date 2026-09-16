@@ -40,7 +40,6 @@ export function ResponsiveNavbar() {
               href={link.href}
               onClick={() => setIsOpen(false)}
               className="text-md hover:text-[var(--theme-main)] hover:bg-[var(--theme-contrast)]/80 rounded px-3 py-2 w-60 transition duration-250"
-              {...link.linkOptions}
             >
               {link.label}
             </Link>

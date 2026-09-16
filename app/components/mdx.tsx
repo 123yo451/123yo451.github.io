@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { compileMDX, MDXRemote } from 'next-mdx-remote/rsc'
+import { compileMDX } from 'next-mdx-remote/rsc'
 import React from 'react'
 
 import remarkGfm from 'remark-gfm'
@@ -115,6 +115,8 @@ export async function CustomMDX(props) {
   const { content } = await compileMDX({
     source: {cwd: dir, value: source},
     options: {
+      // Preserve expressions and component props in trusted, repository-owned MDX.
+      blockJS: false,
       mdxOptions: {
         remarkPlugins: [remarkGfm, remarkEmbedImages, remarkMath],
         rehypePlugins: [rehypeKatex, [rehypePrettyCode, {theme: "everforest-dark"}]]
