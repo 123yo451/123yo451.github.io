@@ -79,6 +79,37 @@ font; code uses monospace. The Tailwind `font-sans`, `font-serif`, and `font-mon
 utilities use the same configuration, including in MDX. Font changes only need
 edits to `app/config.js` and take effect on the next deployment.
 
+## GitHub Actions setup
+
+After creating or forking your project, run:
+
+```bash
+bash setup-github.sh
+```
+
+This creates `.github/workflows/deploy.yml` from the template embedded in the
+script, so the workflow can be added in a new commit in your own repository.
+The script always creates `.github` in the directory containing the script,
+regardless of your current working directory. It does not accept a project-directory
+argument and refuses to overwrite an existing deployment workflow. Other files
+in `.github` are preserved.
+
+The workflow builds the site with Node.js 24 and deploys `out/` to GitHub Pages.
+If your default branch is not `main`, update `on.push.branches` in the generated
+workflow before committing it.
+
+Ensure [GitHub Actions is enabled](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository)
+in the new repository. Under **Settings > Pages > Build and deployment**, select
+**GitHub Actions** as the [publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+The script creates local files; repository settings must be configured on GitHub.
+Then commit and push the generated workflow to your default branch:
+
+```bash
+git add .github/workflows/deploy.yml
+git commit -m "Set up GitHub Pages deployment"
+git push
+```
+
 ## Development notes
 
 - Use Node.js 20.9 or later (Node.js 24 is used in CI and the dev container). The app targets Next.js 16.3.5 with React 19.
