@@ -6,7 +6,11 @@
 
 ### 0. Set up your development environment
 - If you're using Windows, I recommend using a Linux distro running on WSL. All the instructions below assume a Linux/UNIX based development environment.
+- If you're using macOS, you will need to install [Homebrew](https://brew.sh/).
+    - Be sure to run the post-install commands displayed by the installation script displays after it completes.
+    - You will need to open a new terminal window after running the post-install commands.
 - Install Fast Node Manager (`fnm`) by following the instructions [in the repo](https://github.com/schniz/fnm).
+    - You will need to open a new terminal window again after you install `fnm` in order for terminal to update its `PATH` variable and properly load/configure `fnm`.
     - Once `fnm` is installed, install the latest stable versions of NodeJS using the following commands:
 
         ```bash
