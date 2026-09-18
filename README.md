@@ -19,7 +19,7 @@
         ```
 
 ### 1. Fork, then clone, this repo
-- For all instructions, replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
+- **For all instructions, replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.**
 - Fork this repository into your own GitHub account. Name the forked repository `YOUR_GITHUB_USERNAME.github.io`.
     - The repository can be private if you have GitHub Pro, which you can get for free by signing up for the [GitHub Student Developer Pack](https://education.github.com/pack/join). You can always make the repository private at a later date as well.
 - Once you've forked the repository into your personal GitHub account, clone it with the following commands:
